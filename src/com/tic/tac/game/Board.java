@@ -41,8 +41,8 @@ public class Board {
 			changeCurrentPlayer();
 		}
 		if(winner==null) {
-			player1.loser();
-			player2.loser();
+				player1.draw();
+				player2.draw();	
 		} else {
 			if(winner.equals(player1.getPlayerCounter())) {
 				player1.winner();
@@ -67,6 +67,11 @@ public class Board {
 	private void addMoveToBoard(PositionEnum playerMove) {
 		if(board.contains(playerMove)) {
 			matchComplete = true;
+			if(currentPlayer.equals(player1)){
+				winner=player2.getPlayerCounter();
+			} else {
+				winner=player1.getPlayerCounter();
+			}
 		} else {
 			board.add(playerMove);
 			if(PlayerCounter.TAC.equals(currentPlayer.getPlayerCounter())){
@@ -104,10 +109,14 @@ public class Board {
 		int i = (int) (Math.random() * 10);
 		if(i <= 5) {
 			player1 = bot;
+			bot.setPlayerCounter(PlayerCounter.TIC);
 			player2 = computer;
+			computer.setPlayerCounter(PlayerCounter.TAC);
 		} else {
 			player1 = computer;
+			computer.setPlayerCounter(PlayerCounter.TIC);
 			player2 = bot;
+			bot.setPlayerCounter(PlayerCounter.TAC);
 		}
 	}
 

@@ -11,6 +11,8 @@ public interface Player {
 	
 	public void winner();
 	
+	public void draw();
+	
 	public void loser();
 	
 	public void setPlayerCounter(PlayerCounter playerCounter);

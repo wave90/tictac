@@ -27,7 +27,7 @@ public class Bot implements Player{
 	}
 	
 	public Bot(Map<HashSet<PositionEnum>, PositionEnum> memory) {
-		this.memory=memory;
+		this.memory=new HashMap<HashSet<PositionEnum>, PositionEnum>(memory);
 	}
 	
 	public PositionEnum makeAMove(HashSet<PositionEnum> board) {

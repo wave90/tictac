@@ -12,7 +12,7 @@ import com.tic.tac.util.PositionEnum;
 
 public class TeacherBot {
 
-	private Map<HashSet<PositionEnum>, PositionEnum> memory = new HashMap<HashSet<PositionEnum>, PositionEnum>();
+	private Map<HashSet<PositionEnum>, Map<PositionEnum,Integer>> memory = new HashMap<HashSet<PositionEnum>, Map<PositionEnum,Integer>>();
 	
 	private Bot winner;
 	

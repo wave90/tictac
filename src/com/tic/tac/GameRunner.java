@@ -7,7 +7,7 @@ public class GameRunner {
 
 	public static void main(String[] args) {
 		TeacherBot teacher = new TeacherBot();
-		teacher.teachBots(10000, 1000, 10);
+		teacher.teachBots(1000, 10, 10);
 	}
 	
 }

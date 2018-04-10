@@ -15,8 +15,7 @@ public class ComputerBot implements Player {
 		while(!newMove) {
 			nextMove = PositionEnum.getPosFromInt((int)(Math.random()*9) + 1);
 			if(!board.contains(nextMove)) {
-				newMove = true;
-				
+				newMove = true;	
 			}
 		}
 		return nextMove;
